@@ -29,7 +29,7 @@ const PROJECTS_DATA: Record<string, ProjectDetail> = {
     client: "OGcollege",
     description:
       "Redesigning college guidance for Indian students — unifying AI counselling, data-driven choice filling, and 1:1 senior mentorship.",
-    image: "/demo-1.png",
+    image: "/og_collage_thumbnail.png",
   },
   "apex-studio": {
     title: "Apex Studio",

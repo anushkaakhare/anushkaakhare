@@ -18,7 +18,7 @@ export const ALL_PROJECTS: (PortfolioCardProps & { slug: string })[] = [
     description:
       "Redesigning college guidance for Indian students — unifying AI counselling, data-driven choice filling, and 1:1 senior mentorship.",
     tags: ["EdTech", "Product Design", "UX Architecture"],
-    image: "/demo-1.png",
+    image: "/og_collage_thumbnail.png",
     alt: "OGcollege: Redesigning College Guidance for Indian Students",
     link: "/case-studies/ogcollege",
   },

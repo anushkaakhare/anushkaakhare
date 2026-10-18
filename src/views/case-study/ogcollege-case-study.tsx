@@ -7,14 +7,14 @@ import MoreWorks from "@/components/more-works";
 
 export default function OGcollegeCaseStudy() {
   return (
-    <article className="w-full min-h-screen bg-[#526f83] relative overflow-x-clip pb-24">
+    <article className="w-full min-h-screen bg-[#453668] relative overflow-x-clip pb-24">
       {/* Soft Ambient Background Atmosphere (Matching Luzia Framer dreamy glow) */}
       <div className="absolute top-0 left-0 right-0 h-[640px] sm:h-[720px] md:h-[800px] overflow-hidden pointer-events-none z-0">
         <div
           className="absolute inset-0 bg-cover bg-center scale-110 filter blur-[70px] opacity-65"
-          style={{ backgroundImage: "url('/demo-1.png')" }}
+          style={{ backgroundImage: "url('/og_collage_thumbnail.png')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#3a5263]/55 via-[#4a6579]/70 to-[#526f83]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2d224b]/55 via-[#3b2d60]/70 to-[#453668]" />
       </div>
 
       {/* Hero Container */}
@@ -25,14 +25,14 @@ export default function OGcollegeCaseStudy() {
         {/* Floating with generous padding & rounded browser frame    */}
         {/* ========================================================= */}
         <div className="relative z-10 w-full max-w-[1360px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 pt-6 sm:pt-10 md:pt-14 pb-0">
-          <div className="relative w-full aspect-[2048/1420] sm:aspect-[2048/1360] max-h-[500px] sm:max-h-[620px] md:max-h-[720px] rounded-[24px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.3),0_12px_32px_rgba(0,0,0,0.18)] border border-white/25 bg-[#E8ECEC]">
+          <div className="relative w-full aspect-[16/10] sm:aspect-[16/9.5] max-h-[520px] sm:max-h-[640px] md:max-h-[740px] rounded-[24px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.35),0_12px_32px_rgba(0,0,0,0.2)] border border-white/25 bg-[#EDE9FE]">
             <Image
-              src="/demo-1.png"
+              src="/og_collage_thumbnail.png"
               alt="OGcollege Case Study Hero"
               fill
               priority
               sizes="(max-width: 1360px) 100vw, 1360px"
-              className="object-cover object-top select-none pointer-events-none"
+              className="object-cover object-center select-none pointer-events-none"
             />
           </div>
         </div>
