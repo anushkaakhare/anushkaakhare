@@ -73,7 +73,7 @@ export default function MoreWorks({
     <section className={`pt-16 sm:pt-20 md:pt-24 border-t border-gray-100 ${className}`}>
       {/* Section Header */}
       <div className="flex items-center justify-between mb-8 sm:mb-10">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semimbold tracking-tight text-[#111827]">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#111827]">
           {title}
         </h3>
         <Link

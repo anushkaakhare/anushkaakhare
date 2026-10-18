@@ -63,11 +63,17 @@ const PROJECTS_DATA: Record<string, ProjectDetail> = {
   },
 };
 
+export async function generateStaticParams() {
+  return Object.keys(PROJECTS_DATA).map((slug) => ({
+    slug,
+  }));
+}
+
 export async function generateMetadata({
   params,
 }: CaseStudySlugProps): Promise<Metadata> {
   const { slug } = await params;
-  const project = PROJECTS_DATA[slug];
+  const project = slug ? PROJECTS_DATA[slug] : undefined;
 
   if (project) {
     return {
@@ -96,13 +102,16 @@ export default async function CaseStudyDetailPage({
     return <OGcollegeCaseStudy />;
   }
 
-  const project = PROJECTS_DATA[slug] || {
-    title: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+  const project = (slug && PROJECTS_DATA[slug]) || {
+    title: slug
+      ? slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
+      : "Case Study",
     category: "Product Design • Case Study",
     role: "UI/UX Designer",
     timeline: "6 Weeks",
     client: "Client Project",
-    description: "Detailed breakdown of product design challenges, UX research, wireframes, and design solutions.",
+    description:
+      "Detailed breakdown of product design challenges, UX research, wireframes, and design solutions.",
     image: "/demo-2.webp",
   };
 
