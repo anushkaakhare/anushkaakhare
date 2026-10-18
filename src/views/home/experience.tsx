@@ -17,7 +17,7 @@ const EXPERIENCES: ExperienceItem[] = [
     id: 1,
     company: "Aanatech",
     period: "29 Aug 2024 - 30 Dec 2024",
-    role: "Intern UIUX Designer",
+    role: "Intern UI/UX Designer",
     description:
       "Designed responsive landing pages for Aanatech and Musemate.\nRedesigned the Pureblue AI website with improved visual hierarchy and interface structure.\nDesigned Slotify, a desktop slot-booking application focused on simplifying the booking experience.\nCreated user flows, wireframes, and high-fidelity interfaces based on project requirements",
     dotColor: "orange",
