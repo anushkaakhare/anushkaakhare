@@ -161,8 +161,8 @@ export default function PortfolioSection({ cards = DEFAULT_PORTFOLIO_ITEMS }: Po
               transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
               className="text-3xl sm:text-4xl md:text-[44px] lg:text-[50px] font-semibold text-white tracking-tight leading-[115%] shrink-0"
             >
-              <span>My </span>
-              <span className="text-[#FD853A]">Portfolio</span>
+              <span>Selected </span>
+              <span className="text-[#FD853A]">Work</span>
             </motion.h2>
 
             {/* Description */}
@@ -173,7 +173,7 @@ export default function PortfolioSection({ cards = DEFAULT_PORTFOLIO_ITEMS }: Po
               transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
               className="text-xs sm:text-sm md:text-[15px] text-[#D0D5DD] max-w-sm sm:max-w-md lg:max-w-[420px] leading-relaxed font-normal sm:text-right md:text-left"
             >
-              Explore a curated selection of digital products, interactive web experiences, and scalable design systems built for modern high-growth teams.
+              A quick look at recent projects where I helped solve real product problems through research, wireframing, and visual design.
             </motion.p>
           </div>
 

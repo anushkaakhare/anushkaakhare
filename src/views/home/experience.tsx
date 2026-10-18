@@ -15,30 +15,39 @@ export interface ExperienceItem {
 const EXPERIENCES: ExperienceItem[] = [
   {
     id: 1,
-    company: "Anatech",
-    period: "Sep 2016- July 2020",
+    company: "Aanatech",
+    period: "29 Aug 2024 - 30 Dec 2024",
     role: "Intern UIUX Designer",
     description:
-      "Conducted user research, mapped user journeys, and collaborated with senior designers to build responsive landing pages and design system components.",
+      "Designed responsive landing pages for Aanatech and Musemate.\nRedesigned the Pureblue AI website with improved visual hierarchy and interface structure.\nDesigned Slotify, a desktop slot-booking application focused on simplifying the booking experience.\nCreated user flows, wireframes, and high-fidelity interfaces based on project requirements",
     dotColor: "orange",
   },
   {
     id: 2,
-    company: "OG College",
-    period: "Sep 2020- July 2023",
+    company: "Windesign",
+    period: "19 Aug 2024 - 30 Nov 2024",
     role: "Contract UI/UX Designer",
     description:
-      "Redesigned the student portal experience from the ground up, reducing friction during course registration and improving accessibility ratings across web and mobile.",
+      "Redesigned the Oazo app with improved user flows, interface usability, and visual consistency.\nCreated an end-to-end UI kit with reusable components and design patterns.",
     dotColor: "dark",
   },
   {
     id: 3,
-    company: "Yashworld Products",
-    period: "Sep 2023 - Present",
+    company: "Neexly",
+    period: "02 Jan 2025 - 28 March 2025",
+    role: "Contract UI/UX Designer",
+    description:
+      "Designed responsive websites for Neexly and Flip Studio, focusing on information hierarchy, navigation, responsive layouts, and user-friendly experiences.",
+    dotColor: "orange",
+  },
+  {
+    id: 4,
+    company: "Yashworld Products PVT LTD",
+    period: "21 Apr 2025 - Present",
     role: "Full Time UI/UX Designer",
     description:
-      "Leading product design and design systems for enterprise SaaS solutions, collaborating directly with product managers and engineers to deliver polished user interfaces.",
-    dotColor: "orange",
+      "Designed responsive websites and digital products across desktop and mobile, from user flows and wireframes to high-fidelity UI.\nDesigned the Monkis e-commerce website and dashboard, covering product, customer, and admin experiences.\nDesigned the HiveStaff mobile app UI, website, and supporting product experiences.\nDesigned the HiveMeet dashboard and end-to-end user flows, simplifying complex workflows.\nDesigned HiveProperty, a property-listing platform with information architecture, responsive UI, and property discovery.\nDesigned HiveLand and other company/client websites with responsive layouts, clear navigation, and content hierarchy.\nDesigned an end-to-end inventory management dashboard, structuring complex data and workflows.\nCreated user flows and contributed to UX research and usability evaluation based on project requirements.\nCollaborated with developers on Figma designs, interactions, responsive behavior, and implementation",
+    dotColor: "dark",
   },
 ];
 
@@ -166,9 +175,17 @@ export default function ExperienceSection() {
                       >
                         {item.role}
                       </h4>
-                      <p className="text-xs sm:text-sm lg:text-[15px] text-[#98A2B3] font-normal leading-relaxed mt-2 max-w-lg transition-colors duration-300">
-                        {item.description}
-                      </p>
+                      {item.description.includes("\n") ? (
+                        <ul className="list-disc list-outside pl-4 space-y-1.5 text-xs sm:text-sm lg:text-[15px] text-[#98A2B3] font-normal leading-relaxed mt-2.5 max-w-lg transition-colors duration-300">
+                          {item.description.split("\n").map((line, idx) => (
+                            <li key={idx}>{line.trim()}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="text-xs sm:text-sm lg:text-[15px] text-[#98A2B3] font-normal leading-relaxed mt-2 max-w-lg transition-colors duration-300">
+                          {item.description}
+                        </p>
+                      )}
                     </div>
                   </motion.div>
                 );
@@ -247,9 +264,17 @@ export default function ExperienceSection() {
                     </h4>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-sm text-[#98A2B3] font-normal leading-relaxed mt-1.5">
-                      {item.description}
-                    </p>
+                    {item.description.includes("\n") ? (
+                      <ul className="list-disc list-outside pl-4 space-y-1.5 text-xs sm:text-sm text-[#98A2B3] font-normal leading-relaxed mt-1.5">
+                        {item.description.split("\n").map((line, idx) => (
+                          <li key={idx}>{line.trim()}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-xs sm:text-sm text-[#98A2B3] font-normal leading-relaxed mt-1.5">
+                        {item.description}
+                      </p>
+                    )}
                   </motion.div>
                 );
               })}

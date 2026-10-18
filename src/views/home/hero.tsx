@@ -141,7 +141,7 @@ export default function Hero() {
               </div>
               {/* Quote Text */}
               <p className="hero-quote-text text-[#344054] font-normal text-xs lg:text-[14px] xl:text-[17px] 2xl:text-[20px] leading-[125%] lg:leading-[120%] tracking-[-0.015em]">
-                Anushka’s exceptional product design ensure our website’s success. Highly Recommended
+                Good design isn't just about making things look pretty it’s about making complex tools feel simple and natural to use.
               </p>
             </motion.div>
           </div>
@@ -266,7 +266,7 @@ export default function Hero() {
                 <QuoteSvg className="w-6 h-6" />
               </div>
               <p className="text-[#344054] font-normal text-xs sm:text-sm leading-snug tracking-[-0.015em]">
-                Anushka’s exceptional product design ensure our website’s success. Highly Recommended
+                Good design isn't just about making things look pretty it’s about making complex tools feel simple and natural to use.
               </p>
             </div>
 
