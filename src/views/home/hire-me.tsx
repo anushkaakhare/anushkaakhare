@@ -24,7 +24,7 @@ export interface HireMeSectionProps {
 const DEFAULT_STATS: StatItem[] = [
   {
     id: 1,
-    value: "450+",
+    value: "20+",
     label: "Project Completed",
   },
   {
@@ -35,10 +35,10 @@ const DEFAULT_STATS: StatItem[] = [
 ];
 
 export default function HireMeSection({
-  titlePrefix = "Why ",
-  titleHighlight = "Hire me",
-  titleSuffix = "?",
-  description = "I design intuitive, high-converting digital products that align with user psychology and business objectives. From wireframing to high-fidelity Framer prototypes, every detail is engineered for clarity and user delight.",
+  titlePrefix = "About",
+  titleHighlight = " me",
+  titleSuffix = "",
+  description = "I bridge the gap between user needs and business goals. Over the past two years, I’ve learned that the best designs don't come from guessing they come from listening to users, testing early, and iterating quickly with dev teams.",
   stats = DEFAULT_STATS,
   buttonText = "Hire me",
   buttonHref = "#contact",
