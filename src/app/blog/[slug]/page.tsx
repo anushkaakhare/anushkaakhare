@@ -37,7 +37,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
-      url: `https://anushka-portfolio.com/blog/${post.slug}`,
+      url: `https://anushkaakhare.vercel.app/blog/${post.slug}`,
       images: [
         {
           url: post.image,

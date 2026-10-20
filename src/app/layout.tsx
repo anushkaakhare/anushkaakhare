@@ -19,15 +19,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anushka-portfolio.com"),
+  metadataBase: new URL("https://anushkaakhare.vercel.app"),
   title: {
     default: "Anushka Akhare | UI/UX Designer & Product Designer",
     template: "%s | Anushka Akhare",
   },
   description:
-    "Portfolio of Anushka Akhare, a professional UI/UX and Product Designer crafting intuitive digital products, SaaS dashboards, Framer prototypes, and design systems with measurable impact.",
+    "Portfolio of Anushka Akhare, a professional UI/UX and Product Designer crafting intuitive digital products, SaaS dashboards, Framer prototypes, and design systems with measurable impact. Contact: anushkaakhare@gmail.com | +91 9975693424.",
   applicationName: "Anushka Akhare Portfolio",
-  authors: [{ name: "Anushka Akhare", url: "https://anushka-portfolio.com" }],
+  authors: [{ name: "Anushka Akhare", url: "https://anushkaakhare.vercel.app" }],
   creator: "Anushka Akhare",
   publisher: "Anushka Akhare",
   keywords: [
@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     "Mobile App Designer",
     "User Research",
     "Interaction Design",
+    "Hire UI/UX Designer",
+    "Freelance Product Designer India",
+    "anushkaakhare@gmail.com",
   ],
   alternates: {
     canonical: "/",
@@ -50,10 +53,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://anushka-portfolio.com",
+    url: "https://anushkaakhare.vercel.app",
     title: "Anushka Akhare | UI/UX Designer & Product Designer",
     description:
-      "Explore the design portfolio of Anushka Akhare. Crafting intuitive, conversion-driven digital products and scalable design systems.",
+      "Explore the design portfolio of Anushka Akhare. Crafting intuitive, conversion-driven digital products and scalable design systems. Contact: anushkaakhare@gmail.com | +91 9975693424.",
     siteName: "Anushka Akhare Portfolio",
     images: [
       {
@@ -68,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Anushka Akhare | UI/UX Designer & Product Designer",
     description:
-      "Crafting intuitive digital products, SaaS dashboards, and design systems with measurable impact.",
+      "Crafting intuitive digital products, SaaS dashboards, and design systems with measurable impact. Contact: anushkaakhare@gmail.com.",
     creator: "@anushka_akhare",
     images: ["/anushka-hero.png"],
   },
@@ -99,26 +102,38 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://anushka-portfolio.com/#person",
+      "@id": "https://anushkaakhare.vercel.app/#person",
       name: "Anushka Akhare",
       jobTitle: "UI/UX Designer & Product Designer",
-      url: "https://anushka-portfolio.com",
-      image: "https://anushka-portfolio.com/anushka-hero.png",
+      url: "https://anushkaakhare.vercel.app",
+      image: "https://anushkaakhare.vercel.app/anushka-hero.png",
+      email: "mailto:anushkaakhare@gmail.com",
+      telephone: "+91-9975693424",
       sameAs: [
-        "https://twitter.com",
-        "https://instagram.com",
-        "https://facebook.com",
+        "https://www.instagram.com/theanushkalab/?hl=en",
+        "http://www.linkedin.com/in/anushka-akhare-9b9560220",
+        "https://wa.me/919975693424",
       ],
       description:
         "UI/UX Designer specializing in SaaS dashboards, product design, Framer websites, and design systems.",
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-9975693424",
+          contactType: "customer service",
+          email: "anushkaakhare@gmail.com",
+          url: "https://anushkaakhare.vercel.app/#contact",
+          availableLanguage: ["English", "Hindi"],
+        },
+      ],
     },
     {
       "@type": "WebSite",
-      "@id": "https://anushka-portfolio.com/#website",
-      url: "https://anushka-portfolio.com",
+      "@id": "https://anushkaakhare.vercel.app/#website",
+      url: "https://anushkaakhare.vercel.app",
       name: "Anushka Akhare Portfolio",
       publisher: {
-        "@id": "https://anushka-portfolio.com/#person",
+        "@id": "https://anushkaakhare.vercel.app/#person",
       },
     },
   ],

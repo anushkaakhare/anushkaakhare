@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Blog & Design Insights | Anushka Akhare",
     description:
       "Deep dives into product strategy, modern UI/UX workflows, micro-interactions, and design systems by Anushka Akhare.",
-    url: "https://anushka-portfolio.com/blog",
+    url: "https://anushkaakhare.vercel.app/blog",
     images: [
       {
         url: "/blog1.jpeg",

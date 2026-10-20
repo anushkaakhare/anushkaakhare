@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://anushka-portfolio.com/sitemap.xml",
+    sitemap: "https://anushkaakhare.vercel.app/sitemap.xml",
   };
 }
