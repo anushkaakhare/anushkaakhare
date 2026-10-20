@@ -146,7 +146,9 @@ export default function OGcollegeCaseStudy() {
                 <div className="md:col-span-3 lg:col-span-2" />
                 <div className="md:col-span-9 lg:col-span-10">
                   <a
-                    href="#case-study-details"
+                    href="https://ogcollege.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#18181B] hover:bg-black text-white text-sm font-semibold transition-all shadow-md group"
                   >
                     <span>Live Preview</span>
@@ -175,7 +177,7 @@ export default function OGcollegeCaseStudy() {
                         <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
                       </div>
                       <div className="px-3 py-0.5 rounded-md bg-slate-800 text-[11px] text-slate-300 font-mono">
-                        ogcollege.com/journey
+                        ogcollege.io/journey
                       </div>
                       <div className="w-8" />
                     </div>
@@ -246,7 +248,7 @@ export default function OGcollegeCaseStudy() {
                         <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
                       </div>
                       <div className="px-3 py-0.5 rounded-md bg-slate-800 text-[11px] text-slate-300 font-mono">
-                        ogcollege.com/mentors/iit-bombay
+                        ogcollege.io/mentors/iit-bombay
                       </div>
                       <div className="w-8" />
                     </div>
@@ -318,7 +320,7 @@ export default function OGcollegeCaseStudy() {
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
                     </div>
                     <div className="px-3 py-0.5 rounded-md bg-slate-800 text-[11px] text-slate-300 font-mono">
-                      ogcollege.com/tools/choice-filling-predictor
+                      ogcollege.io/tools/choice-filling-predictor
                     </div>
                     <div className="w-8" />
                   </div>
