@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://anushka-portfolio.com/blog",
     images: [
       {
-        url: "/blog/blog-1.jpg",
+        url: "/blog1.jpeg",
         width: 1200,
         height: 630,
         alt: "Anushka Akhare Design Articles",
@@ -27,10 +27,12 @@ export const metadata: Metadata = {
     title: "Blog & Design Insights | Anushka Akhare",
     description:
       "Deep dives into product strategy, modern UI/UX workflows, and design engineering by Anushka Akhare.",
-    images: ["/blog/blog-1.jpg"],
+    images: ["/blog1.jpeg"],
   },
 };
 
+import { BLOG_POSTS } from "@/data/blog-posts";
+
 export default function BlogListingPage() {
-  return <BlogListingClient />;
+  return <BlogListingClient posts={BLOG_POSTS} />;
 }

@@ -18,20 +18,20 @@ export const ALL_PROJECTS: (PortfolioCardProps & { slug: string })[] = [
     description:
       "Redesigning college guidance for Indian students — unifying AI counselling, data-driven choice filling, and 1:1 senior mentorship.",
     tags: ["EdTech", "Product Design", "UX Architecture"],
-    image: "/og_collage_thumbnail.png",
+    image: "/OGcollege.png",
     alt: "OGcollege: Redesigning College Guidance for Indian Students",
     link: "/case-studies/ogcollege",
   },
   {
-    slug: "apex-studio",
+    slug: "hiveproperty",
     id: 2,
-    title: "Apex Studio",
+    title: "HiveProperty",
     description:
-      "Thoughtful visual identity and digital craft for modern companies.",
-    tags: ["Brand Identity", "Web Design"],
-    image: "/demo-2.webp",
-    alt: "Apex Studio Brand & Design",
-    link: "/case-studies/apex-studio",
+      "Streamlining real estate discovery & lead generation — transparent listings, verified construction tracker, and automated CRM lead flows.",
+    tags: ["PropTech", "Web App", "UX Discovery"],
+    image: "/Property_case.png",
+    alt: "HiveProperty: Streamlining Real Estate Discovery & Lead Generation",
+    link: "/case-studies/hiveproperty",
   },
   {
     slug: "luminary",
@@ -65,8 +65,8 @@ export default function MoreWorks({
   // Filter out the active project so we only display other works
   const filteredProjects = currentSlug
     ? ALL_PROJECTS.filter(
-        (p) => p.slug !== currentSlug && p.slug !== currentSlug.replace(/-/g, "")
-      )
+      (p) => p.slug !== currentSlug && p.slug !== currentSlug.replace(/-/g, "")
+    )
     : ALL_PROJECTS.slice(1);
 
   return (
@@ -77,7 +77,7 @@ export default function MoreWorks({
           {title}
         </h3>
         <Link
-          href="/#project"  
+          href="/#project"
           className="inline-flex items-center gap-1.5 text-sm sm:text-base font-medium text-[#FD853A] hover:text-[#e06d27] transition-colors group"
         >
           <span>View all projects</span>

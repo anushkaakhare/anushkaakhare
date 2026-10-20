@@ -177,14 +177,14 @@ export default function Hero() {
               initial={{ opacity: 0, y: 65 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.95, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
-              className=" shrink-0 relative w-[290px] sm:w-[350px] md:w-[390px] lg:w-[440px] xl:w-[540px] 2xl:w-[420px] h-[200px] sm:h-[240px] md:h-[265px] lg:h-[295px] xl:h-[360px] 2xl:h-[360px] bg-[#feb273] rounded-t-full flex items-end justify-center"
+              className=" shrink-0 relative w-[290px] sm:w-[350px] md:w-[390px] lg:w-[400px] xl:w-[390px] 2xl:w-[420px] h-[200px] sm:h-[240px] md:h-[225px] lg:h-[245px] xl:h-[270px] 2xl:h-[300px] bg-[#feb273] rounded-t-full flex items-end justify-center"
             >
               {/* Anushka Portrait: Clean Single Motion Container with Explicit Responsive Dimensions */}
               <motion.div
                 initial={{ opacity: 0, y: 45, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.32 }}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none z-10 w-[220px] h-[280px] sm:w-[270px] sm:h-[340px] md:w-[300px] md:h-[380px] lg:w-[320px] lg:h-[480px] xl:w-[420px] xl:h-[470px] 2xl:w-[500px] 2xl:h-[480px]"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none z-10 w-[220px] h-[280px] sm:w-[270px] sm:h-[320px] md:w-[300px] md:h-[360px] lg:w-[320px] lg:h-[380px] xl:w-[380px] xl:h-[390px] 2xl:w-[500px] 2xl:h-[480px]"
               >
                 <Image
                   src="/anushka-hero.png"

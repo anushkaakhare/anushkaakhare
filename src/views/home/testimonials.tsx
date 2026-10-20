@@ -18,53 +18,53 @@ export interface TestimonialItem {
 const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
-    name: "Jayesh Patil",
-    role: "CEO",
-    company: "Lirante",
+    name: "Yashworld Products PVT LTD",
+    role: "Team collaboration · Product design",
+    company: "",
     avatar: "/avatars/avatar-1.jpg",
-    rating: 4.5,
+    rating: 5.0,
     review:
-      "Anushka completely transformed our SaaS dashboard experience. Her ability to translate intricate fintech workflows into clean, intuitive interfaces decreased our user onboarding drop-off by 38%. Highly thoughtful designer with incredible attention to detail.",
+      "Anushka brings creativity and thoughtfulness to her design work. She’s good at turning complex requirements into clear, user-friendly interfaces and works well with the team to bring ideas to life.",
   },
   {
     id: 2,
-    name: "Sarah Jenkins",
-    role: "VP of Product",
-    company: "Lumina",
+    name: "Neexly",
+    role: "Website Design · Layout & Navigation",
+    company: "",
     avatar: "/avatars/avatar-2.jpg",
     rating: 4.5,
     review:
-      "Working with Anushka was an absolute pleasure. She took our messy design system and turned it into an elegant, component-driven library that our engineering team loves. Fast turnaround, proactive communication, and top-tier aesthetic sense.",
+      "Anushka has a good eye for clean, modern design. She approaches website projects with care and focuses on making layouts clear, responsive, and easy to navigate.",
   },
   {
     id: 3,
-    name: "Marcus Vance",
-    role: "Founder",
-    company: "Apex Studios",
+    name: "Aanatech Software",
+    role: "Web & App Interfaces · Usability",
+    company: "",
     avatar: "/avatars/avatar-3.jpg",
-    rating: 4.0,
+    rating: 4.5,
     review:
-      "Anushka's grasp of modern typography, spacing, and micro-interactions gave our digital brand an unmistakable premium identity. Our conversion rate increased immediately post-launch. She's a true design partner you can rely on.",
+      "Anushka showed a genuine interest in learning and improving her design skills. She worked thoughtfully on website and application interfaces and paid attention to usability and visual details.",
   },
   {
     id: 4,
-    name: "Elena Rostova",
-    role: "Design Director",
-    company: "Pulma",
+    name: "Windesign",
+    role: "App Redesign · UI Systems",
+    company: "",
     avatar: "/avatars/avatar-4.jpg",
     rating: 4.5,
     review:
-      "One of the most talented UI/UX designers I've collaborated with. Anushka doesn't just create visually stunning screens—she solves real product friction with deep user empathy and impeccable craft. Couldn't recommend her more.",
+      "Anushka approached the app redesign with a focus on usability and consistency. Her work on user flows and reusable UI components helped create a more structured design experience.",
   },
   {
     id: 5,
-    name: "David Chen",
-    role: "Co-Founder",
-    company: "Vanguard",
+    name: "BagPack Studio",
+    role: "Cluely AI Launch Film · UI Design",
+    company: "",
     avatar: "/avatars/avatar-5.jpg",
-    rating: 4.0,
+    rating: 5.0,
     review:
-      "From wireframing to interactive Framer prototypes, Anushka delivered far beyond our expectations. Her clean aesthetic and structured design files made handoff seamless for our front-end developers. Exceptional talent.",
+      "Anushka did a great job designing the UI interfaces for our Cluely AI launch film. She understood the visual direction well and created clean, futuristic interfaces that fit seamlessly into the video. It was a pleasure collaborating with her on this project.",
   },
 ];
 
@@ -212,7 +212,7 @@ export default function TestimonialsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
-              className="mt-4 sm:mt-5 max-w-xl mx-auto text-white/70 text-xs sm:text-sm md:text-[15px] leading-relaxed font-normal"
+              className="mt-4 sm:mt-5 max-w-xl mx-auto text-white/70 text-sm xs:text-[15px] sm:text-base md:text-[17px] leading-[1.65] font-normal"
             >
               Hear directly from founders, product leaders, and design partners about how thoughtful UX architecture and clean interface craft transformed their digital products.
             </motion.p>
@@ -258,7 +258,7 @@ export default function TestimonialsSection() {
                             {item.name}
                           </h3>
                           <p className="text-white/60 font-medium text-xs sm:text-sm mt-0.5">
-                            {item.role}, {item.company}
+                            {[item.role, item.company].filter(Boolean).join(", ")}
                           </p>
                         </div>
                       </div>

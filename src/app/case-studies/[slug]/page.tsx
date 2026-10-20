@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import OGcollegeCaseStudy from "@/views/case-study/ogcollege-case-study";
+import HivePropertyCaseStudy from "@/views/case-study/hiveproperty-case-study";
 import MoreWorks from "@/components/more-works";
 
 interface CaseStudySlugProps {
@@ -29,17 +30,27 @@ const PROJECTS_DATA: Record<string, ProjectDetail> = {
     client: "OGcollege",
     description:
       "Redesigning college guidance for Indian students — unifying AI counselling, data-driven choice filling, and 1:1 senior mentorship.",
-    image: "/og_collage_thumbnail.png",
+    image: "/OGcollege.png",
+  },
+  hiveproperty: {
+    title: "HiveProperty",
+    category: "PropTech • Web App • UX Case Study",
+    role: "UI/UX Designer (IA, Discovery, Detail Pages, Lead Flows)",
+    timeline: "2 Weeks",
+    client: "YashWorld Products Private Limited",
+    description:
+      "Streamlining real estate discovery & lead generation — transparent listings, verified construction tracker, and automated CRM lead flows.",
+    image: "/Property_case.png",
   },
   "apex-studio": {
-    title: "Apex Studio",
-    category: "Brand Identity • Web Design",
-    role: "Brand & Digital Product Designer",
-    timeline: "6 Weeks",
-    client: "Apex Studio London",
+    title: "HiveProperty",
+    category: "PropTech • Web App • UX Case Study",
+    role: "UI/UX Designer (IA, Discovery, Detail Pages, Lead Flows)",
+    timeline: "2 Weeks",
+    client: "YashWorld Products Private Limited",
     description:
-      "Thoughtful visual identity and digital craft for modern companies seeking high conversion and refined brand positioning.",
-    image: "/demo-2.webp",
+      "Streamlining real estate discovery & lead generation — transparent listings, verified construction tracker, and automated CRM lead flows.",
+    image: "/Property_case.png",
   },
   luminary: {
     title: "Luminary",
@@ -102,6 +113,11 @@ export default async function CaseStudyDetailPage({
     return <OGcollegeCaseStudy />;
   }
 
+  // If slug is hiveproperty, render the full dedicated case study from YashWorld Products
+  if (slug === "hiveproperty" || slug === "hive-property" || slug === "apex-studio") {
+    return <HivePropertyCaseStudy />;
+  }
+
   const project = (slug && PROJECTS_DATA[slug]) || {
     title: slug
       ? slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())
@@ -112,13 +128,13 @@ export default async function CaseStudyDetailPage({
     client: "Client Project",
     description:
       "Detailed breakdown of product design challenges, UX research, wireframes, and design solutions.",
-    image: "/demo-2.webp",
+    image: "/Property_case.png",
   };
 
   return (
     <article className="w-full min-h-screen bg-[#F5F6F8] pt-20 sm:pt-24 md:pt-28 pb-20">
       <div className="w-full max-w-[1240px] mx-auto px-3 sm:px-6 lg:px-8">
-        
+
         {/* Top Hero Preview Visual Banner */}
         <div className="relative w-full h-[240px] sm:h-[340px] md:h-[420px] rounded-t-[28px] sm:rounded-t-[36px] md:rounded-t-[44px] overflow-hidden bg-[#1E293B] shadow-2xl">
           <Image
@@ -129,7 +145,7 @@ export default async function CaseStudyDetailPage({
             className="object-cover object-center opacity-90 transition-transform duration-700 hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-          
+
           <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-10">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-white/20 backdrop-blur-md text-white border border-white/30 mb-3">
               {project.category}
@@ -142,7 +158,7 @@ export default async function CaseStudyDetailPage({
 
         {/* Main Case Study White Sheet */}
         <div className="relative w-full bg-white rounded-b-[28px] sm:rounded-b-[36px] md:rounded-b-[44px] shadow-[0_30px_90px_rgba(0,0,0,0.08)] px-5 sm:px-10 md:px-14 lg:px-18 py-10 sm:py-14 md:py-16">
-          
+
           {/* Header Row: Title & Close Button */}
           <div className="flex items-start justify-between gap-4 pb-8 border-b border-gray-100">
             <div>
@@ -179,7 +195,7 @@ export default async function CaseStudyDetailPage({
           {/* 2-Column Metadata & Overview Grid */}
           <section className="py-10 sm:py-12 border-b border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
-              
+
               <div className="md:col-span-4 lg:col-span-3 space-y-5 text-sm">
                 <div>
                   <span className="text-xs uppercase tracking-wider text-[#9CA3AF] font-semibold block mb-1">

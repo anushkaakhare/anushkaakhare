@@ -19,8 +19,12 @@ export default function Footer() {
     }
   };
 
-  // Case study pages have their own self-contained minimalist layout (matching Luzia)
-  if (pathname?.startsWith("/case-studies") || pathname?.startsWith("/case-study")) {
+  // Case study pages and blog pages have their own self-contained minimalist layout
+  if (
+    pathname?.startsWith("/case-studies") ||
+    pathname?.startsWith("/case-study") ||
+    pathname?.startsWith("/blog/")
+  ) {
     return null;
   }
 

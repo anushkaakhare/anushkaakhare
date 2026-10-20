@@ -50,13 +50,13 @@ export default function BlogSection({
           </motion.div>
         </div>
 
-        {/* 3-Column Blog Cards Grid */}
+        {/* Blog Cards Grid */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.18 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8 lg:gap-8 items-start"
+          className={`grid grid-cols-1 ${posts.length > 1 ? "md:grid-cols-2 lg:grid-cols-3" : "max-w-md sm:max-w-lg"} gap-7 sm:gap-8 lg:gap-8 items-start`}
         >
           {posts.map((post) => (
             <Link

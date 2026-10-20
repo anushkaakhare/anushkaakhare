@@ -4,22 +4,24 @@ import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightSvg } from "@/svg";
-import { BLOG_POSTS } from "@/data/blog-posts";
+import { BLOG_POSTS, BlogPost } from "@/data/blog-posts";
 
-const CATEGORIES = [
-  "All",
-  "UI/ UX Design",
-  "App Design",
-  "Design System",
-  "User Research",
-];
+export interface BlogListingClientProps {
+  posts?: BlogPost[];
+}
 
-export default function BlogListingClient() {
+export default function BlogListingClient({
+  posts = BLOG_POSTS,
+}: BlogListingClientProps) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
+  const categories = useMemo(() => {
+    return ["All", ...Array.from(new Set(posts.map((post) => post.category)))];
+  }, [posts]);
+
   const filteredPosts = useMemo(() => {
-    return BLOG_POSTS.filter((post) => {
+    return posts.filter((post) => {
       const matchesCategory =
         selectedCategory === "All" || post.category === selectedCategory;
       const matchesSearch =
@@ -30,13 +32,15 @@ export default function BlogListingClient() {
         );
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [posts, selectedCategory, searchQuery]);
 
   return (
     <main className="w-full min-h-screen bg-white select-none">
       {/* Hero Header Area */}
-      <section className="relative w-full pt-28 sm:pt-36 md:pt-40 pb-12 sm:pb-16 bg-gradient-to-b from-[#F9FAFB] to-white border-b border-[#F2F4F7]">
+      <section className="relative w-full pt-6 pb-12 sm:pb-16 bg-gradient-to-b from-[#F9FAFB] to-white border-b border-[#F2F4F7]">
         <div className="w-full custom-container mx-auto px-4 sm:px-6">
+          {/* Top Navigation Bar */}
+
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-[#667085] mb-4">
             <Link href="/" className="hover:text-[#FD853A] transition-colors">
@@ -62,7 +66,7 @@ export default function BlogListingClient() {
           <div className="mt-8 sm:mt-12 flex flex-col md:flex-row md:items-center justify-between gap-5">
             {/* Category Filter Pills */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
-              {CATEGORIES.map((cat) => {
+              {categories.map((cat) => {
                 const isActive = selectedCategory === cat;
                 return (
                   <button
@@ -127,7 +131,7 @@ export default function BlogListingClient() {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-9 lg:gap-10 items-start">
+            <div className={`grid grid-cols-1 ${filteredPosts.length > 1 ? "md:grid-cols-2 lg:grid-cols-3" : "max-w-md sm:max-w-lg"} gap-8 sm:gap-9 lg:gap-10 items-start`}>
               {filteredPosts.map((post) => (
                 <Link
                   key={post.id}
@@ -181,6 +185,17 @@ export default function BlogListingClient() {
               ))}
             </div>
           )}
+
+          {/* Minimal Bottom Bar */}
+          <div className="mt-16 sm:mt-24 pt-8 pb-12 border-t border-[#F2F4F7] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#667085]">
+            <p>© 2026 Anushka Akhare. All rights reserved.</p>
+            <Link
+              href="/"
+              className="hover:text-[#FD853A] font-medium transition-colors"
+            >
+              ← Back to Portfolio
+            </Link>
+          </div>
         </div>
       </section>
     </main>

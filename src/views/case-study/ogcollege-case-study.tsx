@@ -12,7 +12,7 @@ export default function OGcollegeCaseStudy() {
       <div className="absolute top-0 left-0 right-0 h-[640px] sm:h-[720px] md:h-[800px] overflow-hidden pointer-events-none z-0">
         <div
           className="absolute inset-0 bg-cover bg-center scale-110 filter blur-[70px] opacity-65"
-          style={{ backgroundImage: "url('/og_collage_thumbnail.png')" }}
+          style={{ backgroundImage: "url('/OGcollege.png')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#2d224b]/55 via-[#3b2d60]/70 to-[#453668]" />
       </div>
@@ -27,7 +27,7 @@ export default function OGcollegeCaseStudy() {
         <div className="relative z-10 w-full max-w-[1360px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 pt-6 sm:pt-10 md:pt-14 pb-0">
           <div className="relative w-full aspect-[16/10] sm:aspect-[16/9.5] max-h-[520px] sm:max-h-[640px] md:max-h-[740px] rounded-[24px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.35),0_12px_32px_rgba(0,0,0,0.2)] border border-white/25 bg-[#EDE9FE]">
             <Image
-              src="/og_collage_thumbnail.png"
+              src="/OGcollege.png"
               alt="OGcollege Case Study Hero"
               fill
               priority
@@ -398,7 +398,7 @@ export default function OGcollegeCaseStudy() {
               {/* 1. The Short Version */}
               <section className="space-y-4">
                 <div className="flex items-center gap-2">
-                  
+
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111827]">
                     The Short Version
                   </h3>
@@ -414,7 +414,7 @@ export default function OGcollegeCaseStudy() {
               {/* 2. What OGcollege Is (and Why It Matters) */}
               <section className="space-y-4">
                 <div className="flex items-center gap-2">
-                  
+
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111827]">
                     What OGcollege Is (and Why It Matters)
                   </h3>
@@ -441,7 +441,7 @@ export default function OGcollegeCaseStudy() {
               {/* 3. The Problem */}
               <section className="space-y-4">
                 <div className="flex items-center gap-2">
-                  
+
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111827]">
                     The Problem
                   </h3>
@@ -465,7 +465,7 @@ export default function OGcollegeCaseStudy() {
               {/* 4. The Goal & Design Principles */}
               <section className="space-y-4">
                 <div className="flex items-center gap-2">
-                  
+
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111827]">
                     The Goal &amp; Design Principles
                   </h3>
@@ -495,7 +495,7 @@ export default function OGcollegeCaseStudy() {
               {/* 5. Key Design Decisions */}
               <section id="key-decisions" className="space-y-8 scroll-mt-24">
                 <div className="flex items-center gap-2">
-                  
+
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111827]">
                     Key Design Decisions
                   </h3>
@@ -636,7 +636,7 @@ export default function OGcollegeCaseStudy() {
               {/* 6. Visual Direction */}
               <section className="space-y-4">
                 <div className="flex items-center gap-2">
-                  
+
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111827]">
                     Visual Direction
                   </h3>
@@ -657,7 +657,7 @@ export default function OGcollegeCaseStudy() {
               {/* 7. User Research & Usability Testing */}
               <section className="space-y-4">
                 <div className="flex items-center gap-2">
-                  
+
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111827]">
                     User Research &amp; Usability Testing
                   </h3>
@@ -676,7 +676,7 @@ export default function OGcollegeCaseStudy() {
               {/* 8. What Changed & Lessons Learned */}
               <section className="space-y-6">
                 <div className="flex items-center gap-2">
-                  
+
                   <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-[#111827]">
                     What Changed &amp; Lessons Learned
                   </h3>

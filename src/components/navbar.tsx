@@ -183,8 +183,12 @@ export default function Navbar({
         }
     };
 
-    // Hide navbar on dedicated case study pages (matching Luzia Framer reference)
-    if (pathname?.startsWith("/case-studies") || pathname?.startsWith("/case-study")) {
+    // Hide navbar on dedicated case study pages and blog pages
+    if (
+        pathname?.startsWith("/case-studies") ||
+        pathname?.startsWith("/case-study") ||
+        pathname?.startsWith("/blog/")
+    ) {
         return null;
     }
 

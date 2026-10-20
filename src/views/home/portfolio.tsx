@@ -17,18 +17,18 @@ const DEFAULT_PORTFOLIO_ITEMS: PortfolioCardProps[] = [
     title: "OGcollege",
     description: "Redesigning college guidance for Indian students — unifying AI counselling, data-driven choice filling, and 1:1 senior mentorship.",
     tags: ["EdTech", "Product Design", "UX Architecture"],
-    image: "/og_collage_thumbnail.png",
+    image: "/OGcollege.png",
     alt: "OGcollege: Redesigning College Guidance for Indian Students",
     link: "/case-studies/ogcollege",
   },
   {
     id: 2,
-    title: "Apex Studio",
-    description: "Thoughtful visual identity and digital craft for modern companies.",
-    tags: ["Brand Identity", "Web Design"],
-    image: "/demo-2.webp",
-    alt: "Apex Studio Brand & Design",
-    link: "/case-studies/apex-studio",
+    title: "HiveProperty",
+    description: "Streamlining real estate discovery & lead generation — transparent listings, verified construction tracker, and automated CRM lead flows.",
+    tags: ["PropTech", "Web App", "UX Discovery"],
+    image: "/Property_case.png",
+    alt: "HiveProperty: Streamlining Real Estate Discovery & Lead Generation",
+    link: "/case-studies/hiveproperty",
   },
   {
     id: 3,
@@ -171,7 +171,7 @@ export default function PortfolioSection({ cards = DEFAULT_PORTFOLIO_ITEMS }: Po
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
-              className="text-xs sm:text-sm md:text-[15px] text-[#D0D5DD] max-w-sm sm:max-w-md lg:max-w-[420px] leading-relaxed font-normal sm:text-right md:text-left"
+              className="text-[#ffffff] text-sm xs:text-[15px] sm:text-base md:text-[17px] leading-[1.65] max-w-sm sm:max-w-md lg:max-w-[420px]  font-normal sm:text-right md:text-left"
             >
               A quick look at recent projects where I helped solve real product problems through research, wireframing, and visual design.
             </motion.p>

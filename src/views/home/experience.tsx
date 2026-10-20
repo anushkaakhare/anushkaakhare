@@ -176,13 +176,13 @@ export default function ExperienceSection() {
                         {item.role}
                       </h4>
                       {item.description.includes("\n") ? (
-                        <ul className="list-disc list-outside pl-4 space-y-1.5 text-xs sm:text-sm lg:text-[15px] text-[#98A2B3] font-normal leading-relaxed mt-2.5 max-w-lg transition-colors duration-300">
+                        <ul className="list-disc list-outside pl-4 space-y-1.5 text-[#667085] text-sm xs:text-[15px] sm:text-base md:text-[17px] leading-[1.65] mt-2.5 max-w-lg transition-colors duration-300">
                           {item.description.split("\n").map((line, idx) => (
                             <li key={idx}>{line.trim()}</li>
                           ))}
                         </ul>
                       ) : (
-                        <p className="text-xs sm:text-sm lg:text-[15px] text-[#98A2B3] font-normal leading-relaxed mt-2 max-w-lg transition-colors duration-300">
+                        <p className="text-[#667085] text-sm xs:text-[15px] sm:text-base md:text-[17px] leading-[1.65] mt-2 max-w-lg transition-colors duration-300">
                           {item.description}
                         </p>
                       )}
@@ -265,13 +265,13 @@ export default function ExperienceSection() {
 
                     {/* Description */}
                     {item.description.includes("\n") ? (
-                      <ul className="list-disc list-outside pl-4 space-y-1.5 text-xs sm:text-sm text-[#98A2B3] font-normal leading-relaxed mt-1.5">
+                      <ul className="list-disc list-outside pl-4 space-y-1.5 text-[#667085] text-sm xs:text-[15px] sm:text-base md:text-[17px] leading-[1.65] mt-1.5">
                         {item.description.split("\n").map((line, idx) => (
                           <li key={idx}>{line.trim()}</li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-xs sm:text-sm text-[#98A2B3] font-normal leading-relaxed mt-1.5">
+                      <p className="text-[#667085] text-sm xs:text-[15px] sm:text-base md:text-[17px] leading-[1.65] mt-1.5">
                         {item.description}
                       </p>
                     )}
