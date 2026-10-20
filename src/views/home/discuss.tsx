@@ -194,55 +194,7 @@ export default function ProjectDiscussionSection({
           </motion.div>
 
           {/* Social Proof / Trust Badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.24 }}
-            className="flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-8 md:gap-x-12 gap-y-3 mt-6 sm:mt-9 text-xs sm:text-[13.5px] text-[#344054] font-medium"
-          >
-            {/* Badge 1: 4.9/5 Average Ratings */}
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="text-[#1D2939] shrink-0"
-              >
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-              <span>4.9/5 Average Ratings</span>
-            </div>
-
-            {/* Badge 2: 25+ Winning Awards */}
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="text-[#1D2939] shrink-0"
-              >
-                <path d="M12 2a6 6 0 0 0-6 6c0 2.22 1.2 4.16 3 5.2V22l3-2 3 2v-8.8c1.8-1.04 3-2.98 3-5.2a6 6 0 0 0-6-6zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
-              </svg>
-              <span>25+ Winning Awards</span>
-            </div>
-
-            {/* Badge 3: Certified Product Designer */}
-            <div className="flex items-center gap-1.5 sm:gap-2">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="text-[#1D2939] shrink-0"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.4 14.2l-3.8-3.8 1.4-1.4 2.4 2.4 5.9-5.9 1.4 1.4-7.3 7.3z" />
-              </svg>
-              <span>Certified Product Designer</span>
-            </div>
-          </motion.div>
+         
         </div>
       </div>
 
