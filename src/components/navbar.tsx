@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -24,6 +24,20 @@ const RIGHT_NAV_ITEMS: NavItem[] = [
 
 const ALL_NAV_ITEMS: NavItem[] = [...LEFT_NAV_ITEMS, ...RIGHT_NAV_ITEMS];
 
+interface SectionSpyItem {
+    name: string;
+    id: string;
+}
+
+const SPY_SECTIONS: SectionSpyItem[] = [
+    { name: "Home", id: "home" },
+    { name: "Project", id: "project" },
+    { name: "Resume", id: "resume" },
+    { name: "About", id: "about" },
+    { name: "Testimonials", id: "testimonials" },
+    { name: "Contact", id: "contact" },
+];
+
 interface NavbarProps {
     activeItem?: string;
     onItemChange?: (item: string) => void;
@@ -39,6 +53,13 @@ export default function Navbar({
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
     const active = controlledActiveItem ?? internalActive;
+    const activeRef = useRef<string>(active);
+    const isClickScrollingRef = useRef<boolean>(false);
+    const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    useEffect(() => {
+        activeRef.current = active;
+    }, [active]);
 
     const handleSetActive = useCallback(
         (name: string) => {
@@ -48,75 +69,80 @@ export default function Navbar({
         [onItemChange]
     );
 
-    // Detect scroll for subtle shadow/blur enhancement and section spy
+    // Scroll spy for automatic active section detection
+    const handleScroll = useCallback(() => {
+        const scrollY = window.scrollY;
+        setIsScrolled(scrollY > 15);
+
+        // If clicking to navigate, don't override active item during the smooth scroll
+        if (isClickScrollingRef.current) return;
+
+        // If on a subpage like /blog, don't spy home sections
+        if (typeof window !== "undefined" && window.location.pathname !== "/") {
+            return;
+        }
+
+        // If near top of page, always Home
+        if (scrollY < 120) {
+            if (activeRef.current !== "Home") {
+                handleSetActive("Home");
+            }
+            return;
+        }
+
+        const scrollBottom = scrollY + window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+
+        // If near bottom of page, always Contact
+        if (scrollBottom >= docHeight - 90) {
+            if (activeRef.current !== "Contact") {
+                handleSetActive("Contact");
+            }
+            return;
+        }
+
+        // Check which section is in view relative to viewport top threshold (180px)
+        const threshold = 180;
+        let currentActive = "Home";
+
+        for (const section of SPY_SECTIONS) {
+            if (section.id === "home") continue;
+            const el = document.getElementById(section.id);
+            if (!el) continue;
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= threshold) {
+                currentActive = section.name;
+            } else {
+                break;
+            }
+        }
+
+        if (currentActive && currentActive !== activeRef.current) {
+            handleSetActive(currentActive);
+        }
+    }, [handleSetActive]);
+
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 15);
-
-            // If on a subpage like /blog, keep Blog active
-            if (typeof window !== "undefined" && window.location.pathname.startsWith("/blog")) {
-                if (active !== "Blog") {
-                    handleSetActive("Blog");
-                }
-                return;
-            }
-
-            // Scroll spy for automatic active section detection
-            const sectionElements = ALL_NAV_ITEMS.filter((item) => item.href.startsWith("#")).map((item) => {
-                const id = item.href.replace("#", "");
-                const el = document.getElementById(id);
-                if (!el) return null;
-                const rect = el.getBoundingClientRect();
-                const absoluteTop = rect.top + window.scrollY;
-                return {
-                    name: item.name,
-                    id,
-                    top: absoluteTop,
-                    height: el.offsetHeight || 100,
-                };
-            }).filter(Boolean) as { name: string; id: string; top: number; height: number }[];
-
-            if (sectionElements.length === 0) return;
-
-            // Sort by actual vertical document position
-            sectionElements.sort((a, b) => a.top - b.top);
-
-            const scrollY = window.scrollY;
-            const scrollBottom = scrollY + window.innerHeight;
-            const docHeight = document.documentElement.scrollHeight;
-
-            // If scrolled to bottom of page, activate the last section
-            if (scrollBottom >= docHeight - 120) {
-                const lastItem = sectionElements[sectionElements.length - 1];
-                if (lastItem && lastItem.name !== active) {
-                    handleSetActive(lastItem.name);
-                }
-                return;
-            }
-
-            // Check which section is in view
-            const scrollPosition = scrollY + 160;
-            let currentActive = sectionElements[0].name;
-
-            for (let i = 0; i < sectionElements.length; i++) {
-                const sec = sectionElements[i];
-                if (sec.top <= scrollPosition) {
-                    currentActive = sec.name;
-                } else {
-                    break;
-                }
-            }
-
-            if (currentActive && currentActive !== active) {
-                handleSetActive(currentActive);
-            }
-        };
-
         window.addEventListener("scroll", handleScroll, { passive: true });
+
+        // Also attach to lenis scroll event if available
+        const lenis = (window as unknown as { lenis?: { on: (event: string, callback: () => void) => void; off: (event: string, callback: () => void) => void } }).lenis;
+        if (lenis?.on) {
+            lenis.on("scroll", handleScroll);
+        }
+
         handleScroll();
 
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [active, handleSetActive]);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            if (lenis?.off) {
+                lenis.off("scroll", handleScroll);
+            }
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
+            }
+        };
+    }, [handleScroll]);
 
     // Close mobile menu on Escape key
     useEffect(() => {
@@ -147,7 +173,16 @@ export default function Navbar({
         handleSetActive(name);
         setMobileMenuOpen(false);
 
-        // If on a subpage (e.g. /blog or /blog/[slug]), redirect to home with hash
+        // Briefly lock scroll spy while smooth scrolling
+        isClickScrollingRef.current = true;
+        if (scrollTimeoutRef.current) {
+            clearTimeout(scrollTimeoutRef.current);
+        }
+        scrollTimeoutRef.current = setTimeout(() => {
+            isClickScrollingRef.current = false;
+        }, 1100);
+
+        // If on a subpage (e.g. /blog or /case-studies), redirect to home with hash
         if (typeof window !== "undefined" && window.location.pathname !== "/") {
             if (href.startsWith("#")) {
                 e.preventDefault();
@@ -160,10 +195,11 @@ export default function Navbar({
             const targetId = href.replace("#", "");
             e.preventDefault();
 
+            const lenis = (window as unknown as { lenis?: { scrollTo: (target: number | HTMLElement, opts?: { offset?: number; duration?: number }) => void } }).lenis;
+
             if (targetId === "" || targetId === "home") {
-                const lenis = (window as unknown as { lenis?: { scrollTo: (target: number | HTMLElement, opts?: { offset?: number; duration?: number }) => void } }).lenis;
                 if (lenis) {
-                    lenis.scrollTo(0, { duration: 1.2 });
+                    lenis.scrollTo(0, { duration: 1.0 });
                 } else {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                 }
@@ -171,9 +207,8 @@ export default function Navbar({
             } else {
                 const element = document.getElementById(targetId);
                 if (element) {
-                    const lenis = (window as unknown as { lenis?: { scrollTo: (target: number | HTMLElement, opts?: { offset?: number; duration?: number }) => void } }).lenis;
                     if (lenis) {
-                        lenis.scrollTo(element, { offset: -90, duration: 1.2 });
+                        lenis.scrollTo(element, { offset: -85, duration: 1.0 });
                     } else {
                         element.scrollIntoView({ behavior: "smooth" });
                     }
