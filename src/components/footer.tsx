@@ -187,7 +187,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/resume.pdf"
+                    href="/AnushkaAkhareResume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#d0d5dd] hover:text-[#fd853a] transition-colors text-sm sm:text-[15px]"

@@ -18,7 +18,7 @@ const LEFT_NAV_ITEMS: NavItem[] = [
 
 const RIGHT_NAV_ITEMS: NavItem[] = [
     { name: "Testimonials", href: "#testimonials" },
-    { name: "Resume", href: "/resume.pdf", openInNewTab: true },
+    { name: "Resume", href: "/AnushkaAkhareResume.pdf", openInNewTab: true },
     { name: "Contact", href: "#contact" },
 ];
 

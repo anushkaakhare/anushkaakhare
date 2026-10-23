@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import OGcollegeCaseStudy from "@/views/case-study/ogcollege-case-study";
 import HivePropertyCaseStudy from "@/views/case-study/hiveproperty-case-study";
+import HivestaffCaseStudy from "@/views/case-study/hivestaff-case-study";
 import MoreWorks from "@/components/more-works";
 
 interface CaseStudySlugProps {
@@ -52,25 +53,35 @@ const PROJECTS_DATA: Record<string, ProjectDetail> = {
       "Streamlining real estate discovery & lead generation — transparent listings, verified construction tracker, and automated CRM lead flows.",
     image: "/Property_case.png",
   },
-  luminary: {
-    title: "Luminary",
-    category: "Mobile App • UIUX Design",
-    role: "Lead Mobile UX Designer",
-    timeline: "10 Weeks",
-    client: "Luminary Health",
+  "hivestaff-v2": {
+    title: "Hivestaff V2",
+    category: "Mobile Application (iOS & Android) • Business Management",
+    role: "UI/UX Designer",
+    timeline: "14 Weeks",
+    client: "Hivestaff",
     description:
-      "Creative digital experiences designed with clarity, speed, and care for daily mindfulness and wellness routines.",
-    image: "/demo-3.webp",
+      "Redesigning mobile operations for business management — high-density scannable cards, one-tap lead actions, and modular workflows.",
+    image: "/hivestaff_redesign_v2.png",
   },
-  vanguard: {
-    title: "Vanguard",
-    category: "Framer Website • Product Design",
-    role: "Interaction & Framer Developer",
-    timeline: "4 Weeks",
-    client: "Vanguard Media",
+  hivestaff: {
+    title: "Hivestaff V2",
+    category: "Mobile Application (iOS & Android) • Business Management",
+    role: "UI/UX Designer",
+    timeline: "14 Weeks",
+    client: "Hivestaff",
     description:
-      "Interactive editorial platform with bespoke micro-interactions, responsive layouts, and lightning fast page performance.",
-    image: "/demo-4.webp",
+      "Redesigning mobile operations for business management — high-density scannable cards, one-tap lead actions, and modular workflows.",
+    image: "/hivestaff_redesign_v2.png",
+  },
+  luminary: {
+    title: "Hivestaff V2",
+    category: "Mobile Application (iOS & Android) • Business Management",
+    role: "UI/UX Designer",
+    timeline: "14 Weeks",
+    client: "Hivestaff",
+    description:
+      "Redesigning mobile operations for business management — high-density scannable cards, one-tap lead actions, and modular workflows.",
+    image: "/hivestaff_redesign_v2.png",
   },
 };
 
@@ -116,6 +127,11 @@ export default async function CaseStudyDetailPage({
   // If slug is hiveproperty, render the full dedicated case study from YashWorld Products
   if (slug === "hiveproperty" || slug === "hive-property" || slug === "apex-studio") {
     return <HivePropertyCaseStudy />;
+  }
+
+  // If slug is hivestaff-v2, hivestaff, or luminary, render Hivestaff V2 case study
+  if (slug === "hivestaff-v2" || slug === "hivestaff" || slug === "luminary") {
+    return <HivestaffCaseStudy />;
   }
 
   const project = (slug && PROJECTS_DATA[slug]) || {

@@ -34,15 +34,15 @@ export const ALL_PROJECTS: (PortfolioCardProps & { slug: string })[] = [
     link: "/case-studies/hiveproperty",
   },
   {
-    slug: "luminary",
+    slug: "hivestaff-v2",
     id: 3,
-    title: "Luminary",
+    title: "Hivestaff V2",
     description:
-      "Creative digital experiences designed with clarity, speed, and care.",
-    tags: ["Mobile App", "UIUX Design"],
-    image: "/demo-3.webp",
-    alt: "Luminary UIUX Design",
-    link: "/case-studies/luminary",
+      "Redesigning mobile operations for business management — scannable cards, one-tap lead actions, and modular workflows.",
+    tags: ["Mobile App", "Enterprise UX", "Operations"],
+    image: "/hivestaff_redesign_v2.png",
+    alt: "Hivestaff V2: Redesigning Mobile Operations for Business Management",
+    link: "/case-studies/hivestaff-v2",
   },
   {
     slug: "vanguard",

@@ -160,235 +160,119 @@ export default function OGcollegeCaseStudy() {
             </div>
 
             {/* ========================================================= */}
-            {/* DEVICE MOCKUP SHOWCASE (Dark Slate Frame as in Luzia)     */}
+            {/* HIGH-FIDELITY CASE STUDY BENTO GRID                       */}
             {/* ========================================================= */}
-            <section className="py-12 sm:py-16">
-              <div className="w-full rounded-[28px] sm:rounded-[36px] bg-[#374C5E] p-4 sm:p-7 md:p-9 shadow-xl border border-black/10">
-
-                {/* 2 Side-by-Side Browser Device Mockups */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8">
-
-                  {/* Device Mockup 1: Journey-Led Homepage */}
-                  <div className="rounded-2xl sm:rounded-3xl bg-[#0F172A] border border-slate-700/60 overflow-hidden shadow-2xl flex flex-col">
-                    <div className="h-10 px-4 bg-[#1E293B]/80 border-b border-slate-700 flex items-center justify-between text-xs text-slate-400">
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                      </div>
-                      <div className="px-3 py-0.5 rounded-md bg-slate-800 text-[11px] text-slate-300 font-mono">
-                        ogcollege.io/journey
-                      </div>
-                      <div className="w-8" />
-                    </div>
-
-                    <div className="p-5 sm:p-6 bg-gradient-to-br from-[#0F172A] to-[#1E293B] flex-1 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-4">
-                          <div className="font-medium text-white text-base tracking-tight flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-[#10B981]" />
-                            OGcollege
-                          </div>
-                          <div className="flex items-center gap-1 bg-slate-800/80 p-0.5 rounded-lg text-[10px] text-slate-300">
-                            <span className="px-2 py-0.5 rounded bg-indigo-600 text-white font-medium">Engineering</span>
-                            <span className="px-2 py-0.5">Medical</span>
-                            <span className="px-2 py-0.5">BITSAT</span>
-                          </div>
-                        </div>
-
-                        <div className="my-3">
-                          <span className="text-[11px] font-semibold uppercase tracking-wider text-indigo-400">
-                            Interactive Flow
-                          </span>
-                          <h4 className="text-xl font-medium text-white mt-1 leading-snug">
-                            &ldquo;Where are you right now?&rdquo;
-                          </h4>
-                          <p className="text-xs text-slate-300 mt-1">
-                            Surfacing tools according to your exact exam readiness stage.
-                          </p>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-2 my-4">
-                          <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50">
-                            <span className="text-[10px] text-slate-400 font-medium block">Stage 1</span>
-                            <span className="text-xs font-semibold text-white">Preparing</span>
-                            <span className="text-[10px] text-indigo-300 block mt-0.5">Cutoffs &amp; Syllabi</span>
-                          </div>
-                          <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50">
-                            <span className="text-[10px] text-slate-400 font-medium block">Stage 2</span>
-                            <span className="text-xs font-semibold text-white">Results Out</span>
-                            <span className="text-[10px] text-indigo-300 block mt-0.5">Rank Predictors</span>
-                          </div>
-                          <div className="p-3 rounded-xl bg-indigo-600/20 border border-indigo-500/40">
-                            <span className="text-[10px] text-indigo-300 font-semibold block">Stage 3 (Active)</span>
-                            <span className="text-xs font-semibold text-white">Counselling</span>
-                            <span className="text-[10px] text-emerald-400 block mt-0.5">JoSAA Choice-Filler</span>
-                          </div>
-                          <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/50">
-                            <span className="text-[10px] text-slate-400 font-medium block">Stage 4</span>
-                            <span className="text-xs font-semibold text-white">Choosing</span>
-                            <span className="text-[10px] text-indigo-300 block mt-0.5">1:1 Senior Advice</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-2 pt-3 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
-                        <span>✓ Mobile-First Execution</span>
-                        <span className="text-emerald-400 font-medium">8 Streams Supported</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Device Mockup 2: Senior Mentorship Booking */}
-                  <div className="rounded-2xl sm:rounded-3xl bg-[#0F172A] border border-slate-700/60 overflow-hidden shadow-2xl flex flex-col">
-                    <div className="h-10 px-4 bg-[#1E293B]/80 border-b border-slate-700 flex items-center justify-between text-xs text-slate-400">
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                      </div>
-                      <div className="px-3 py-0.5 rounded-md bg-slate-800 text-[11px] text-slate-300 font-mono">
-                        ogcollege.io/mentors/iit-bombay
-                      </div>
-                      <div className="w-8" />
-                    </div>
-
-                    <div className="p-5 sm:p-6 bg-gradient-to-br from-[#0F172A] to-[#1E293B] flex-1 flex flex-col justify-between">
-                      <div>
-                        <div className="flex flex-wrap gap-1.5 mb-4">
-                          <span className="px-2.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-[10px] font-medium">
-                            IIT Bombay
-                          </span>
-                          <span className="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-[10px]">
-                            Computer Science
-                          </span>
-                          <span className="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-[10px]">
-                            Hindi / English
-                          </span>
-                          <span className="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 text-[10px]">
-                            4.9★
-                          </span>
-                        </div>
-
-                        <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 shadow-md">
-                          <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-400 to-indigo-500 flex items-center justify-center font-medium text-white text-base">
-                              AK
-                            </div>
-                            <div>
-                              <div className="flex items-center gap-1.5">
-                                <h5 className="text-sm font-semibold text-white">Aryan K.</h5>
-                                <span className="px-1.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[9px] font-semibold border border-emerald-500/30">
-                                  ✓ Verified Senior
-                                </span>
-                              </div>
-                              <p className="text-[11px] text-slate-300">IIT Bombay &bull; B.Tech CSE &bull; Final Year</p>
-                              <div className="flex items-center gap-2 mt-1 text-[10px] text-amber-300">
-                                <span>★ 4.95 (142 sessions)</span>
-                                <span className="text-slate-400">&bull;</span>
-                                <span className="text-slate-300">₹499 / 30 mins</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between">
-                            <div className="text-[10px] text-slate-300">
-                              Next slot: <span className="text-emerald-400 font-medium">Today, 6:00 PM</span>
-                            </div>
-                            <button className="px-3 py-1 rounded-lg bg-[#FD853A] hover:bg-[#ea6f24] text-white text-xs font-semibold shadow-sm transition-colors">
-                              Book Call
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-2 pt-3 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
-                        <span>✓ In-Context Sticky Booking</span>
-                        <span className="text-indigo-300 font-medium">Zero Redirection Hesitation</span>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Full Width Device Mockup 3: Choice Filling Dashboard */}
-                <div className="rounded-2xl sm:rounded-3xl bg-[#0F172A] border border-slate-700/60 overflow-hidden shadow-2xl">
-                  <div className="h-10 px-4 bg-[#1E293B]/80 border-b border-slate-700 flex items-center justify-between text-xs text-slate-400">
+            <section className="py-6 sm:py-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-stretch">
+                {/* Left Bento Cell: Choice Filling Main Tool (Span 7 cols) */}
+                <a
+                  href="/og_clg_case_study_3.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Click to view full image in high resolution"
+                  className="group md:col-span-7 relative rounded-3xl border border-gray-200/90 shadow-[0_12px_40px_rgba(0,0,0,0.06)] bg-white overflow-hidden flex flex-col h-[480px] sm:h-[530px] md:h-[570px] lg:h-[600px] transition-all duration-300 hover:shadow-[0_24px_55px_rgba(0,0,0,0.12)] hover:-translate-y-1 cursor-pointer"
+                >
+                  {/* Browser Chrome Header */}
+                  <div className="h-10 px-4 bg-[#F8FAFC] border-b border-gray-200/80 flex items-center justify-between text-xs text-gray-500 shrink-0 select-none">
                     <div className="flex items-center gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#EF4444]" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
                     </div>
-                    <div className="px-3 py-0.5 rounded-md bg-slate-800 text-[11px] text-slate-300 font-mono">
-                      ogcollege.io/tools/choice-filling-predictor
+                    <div className="px-3 py-0.5 rounded-md bg-white border border-gray-200/80 text-[11px] text-gray-600 font-mono flex items-center gap-1.5 shadow-2xs">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
+                      <span>ogcollege.io/tools/choice-filling</span>
                     </div>
-                    <div className="w-8" />
+                    <span className="text-xs text-gray-400 group-hover:text-[#FD853A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
                   </div>
 
-                  <div className="p-6 sm:p-8 bg-[#0F172A]">
-                    <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-800">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-xs text-slate-400">Active Profile:</span>
-                        <span className="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
-                          JEE Adv Rank: #14,250
-                        </span>
-                        <span className="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs">
-                          Category: General (EWS)
-                        </span>
-                        <span className="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs">
-                          Home State: Maharashtra
-                        </span>
-                      </div>
-
-                      <div className="px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 text-xs font-medium border border-emerald-500/20">
-                        ✓ Honest Readout: Safe (5) • Target (7) • Reach (3)
-                      </div>
+                  {/* Edge-to-Edge UI Screen */}
+                  <div className="relative w-full flex-1 overflow-hidden bg-[#F8FAFC]">
+                    <Image
+                      src="/og_clg_case_study_3.png"
+                      alt="OGcollege JoSAA Choice Filling platform"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                      className="object-cover object-top select-none transition-transform duration-500 group-hover:scale-[1.015]"
+                      priority
+                    />
+                    {/* Bottom gentle gradient fade to keep the edge soft */}
+                    <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white via-white/70 to-transparent pointer-events-none" />
+                    
+                    {/* Floating context pill */}
+                    <div className="absolute bottom-4 left-4 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-200/90 text-xs font-medium text-gray-800 shadow-sm flex items-center gap-1.5 select-none">
+                      <span className="w-2 h-2 rounded-full bg-[#FD853A]" />
+                      <span>JoSAA Choice Filling &bull; Core Platform</span>
                     </div>
-
-                    <div className="mt-4 space-y-2.5">
-                      <div className="p-3.5 rounded-xl bg-slate-800/70 border border-slate-700/50 flex items-center justify-between text-xs sm:text-sm">
-                        <div className="flex items-center gap-3">
-                          <span className="w-6 h-6 rounded-md bg-slate-700 text-slate-300 flex items-center justify-center text-xs font-medium">1</span>
-                          <div>
-                            <p className="font-semibold text-white">IIT Roorkee &bull; Data Science &amp; Artificial Intelligence</p>
-                            <p className="text-slate-400 text-xs">2024 Closing Rank: 14,890 &bull; 4-Year B.Tech</p>
-                          </div>
-                        </div>
-                        <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
-                          High Chance (92%)
-                        </span>
-                      </div>
-
-                      <div className="p-3.5 rounded-xl bg-slate-800/70 border border-slate-700/50 flex items-center justify-between text-xs sm:text-sm">
-                        <div className="flex items-center gap-3">
-                          <span className="w-6 h-6 rounded-md bg-slate-700 text-slate-300 flex items-center justify-center text-xs font-medium">2</span>
-                          <div>
-                            <p className="font-semibold text-white">IIT Kharagpur &bull; Electrical &amp; Electronics Engineering</p>
-                            <p className="text-slate-400 text-xs">2024 Closing Rank: 13,950 &bull; 4-Year B.Tech</p>
-                          </div>
-                        </div>
-                        <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold border border-amber-500/30">
-                          Moderate Chance (61%)
-                        </span>
-                      </div>
-
-                      <div className="p-3.5 rounded-xl bg-slate-800/70 border border-slate-700/50 flex items-center justify-between text-xs sm:text-sm">
-                        <div className="flex items-center gap-3">
-                          <span className="w-6 h-6 rounded-md bg-slate-700 text-slate-300 flex items-center justify-center text-xs font-medium">3</span>
-                          <div>
-                            <p className="font-semibold text-white">IIT Delhi &bull; Mechanical Engineering</p>
-                            <p className="text-slate-400 text-xs">2024 Closing Rank: 11,200 &bull; 4-Year B.Tech</p>
-                          </div>
-                        </div>
-                        <span className="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 text-xs font-semibold border border-rose-500/30">
-                          Low Chance (22%)
-                        </span>
-                      </div>
-                    </div>
-
                   </div>
+                </a>
+
+                {/* Right Bento Column: 2 Stacked Cells (Span 5 cols) */}
+                <div className="md:col-span-5 flex flex-col gap-4 sm:gap-6 h-auto md:h-[570px] lg:h-[600px]">
+                  {/* Top Cell: Orbi AI Guidance */}
+                  <a
+                    href="/og_clg_case_study_2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Click to view full image in high resolution"
+                    className="group flex-1 relative rounded-3xl border border-gray-200/90 shadow-[0_12px_40px_rgba(0,0,0,0.06)] bg-gradient-to-br from-white via-[#FAF5FF] to-[#EDE9FE] overflow-hidden flex items-center justify-center min-h-[230px] sm:min-h-[265px] transition-all duration-300 hover:shadow-[0_24px_55px_rgba(0,0,0,0.12)] hover:-translate-y-1 cursor-pointer"
+                  >
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <Image
+                        src="/og_clg_case_study_2.png"
+                        alt="Orbi AI Assistant"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 40vw"
+                        className="object-contain scale-135 sm:scale-140 select-none transition-transform duration-500 group-hover:scale-145"
+                      />
+                    </div>
+
+                    {/* Top-right subtle preview arrow */}
+                    <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200/80 flex items-center justify-center text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-sm">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                      </svg>
+                    </div>
+
+                    {/* Floating context pill */}
+                    <div className="absolute bottom-4 left-4 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-200/90 text-xs font-medium text-gray-800 shadow-sm flex items-center gap-1.5 select-none">
+                      <span className="w-2 h-2 rounded-full bg-indigo-500" />
+                      <span>Orbi AI &bull; Regional Voice Guidance</span>
+                    </div>
+                  </a>
+
+                  {/* Bottom Cell: Student Testimonials */}
+                  <a
+                    href="/og_clg_case_study_1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Click to view full image in high resolution"
+                    className="group flex-1 relative rounded-3xl border border-gray-200/90 shadow-[0_12px_40px_rgba(0,0,0,0.06)] bg-[#EEEDF7] overflow-hidden flex items-center justify-center min-h-[230px] sm:min-h-[265px] transition-all duration-300 hover:shadow-[0_24px_55px_rgba(0,0,0,0.12)] hover:-translate-y-1 cursor-pointer"
+                  >
+                    <Image
+                      src="/og_clg_case_study_1.png"
+                      alt="OGcollege Student Reviews"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="object-contain p-3 sm:p-5 select-none transition-transform duration-500 group-hover:scale-105"
+                    />
+
+                    {/* Top-right subtle preview arrow */}
+                    <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200/80 flex items-center justify-center text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-sm">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                      </svg>
+                    </div>
+
+                    {/* Floating context pill */}
+                    <div className="absolute bottom-4 left-4 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-200/90 text-xs font-medium text-gray-800 shadow-sm flex items-center gap-1.5 select-none">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                      <span>Social Proof &bull; Verified Reviews</span>
+                    </div>
+                  </a>
                 </div>
-
               </div>
             </section>
 

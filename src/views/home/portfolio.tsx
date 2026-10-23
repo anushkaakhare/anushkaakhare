@@ -32,21 +32,12 @@ const DEFAULT_PORTFOLIO_ITEMS: PortfolioCardProps[] = [
   },
   {
     id: 3,
-    title: "Luminary",
-    description: "Creative digital experiences designed with clarity, speed, and care.",
-    tags: ["Mobile App", "UIUX Design"],
-    image: "/demo-3.webp",
-    alt: "Luminary UIUX Design",
-    link: "/case-studies/luminary",
-  },
-  {
-    id: 4,
-    title: "Vanguard",
-    description: "Interactive editorial platform with bespoke micro-interactions.",
-    tags: ["Framer Website", "Product Design"],
-    image: "/demo-4.webp",
-    alt: "Vanguard Framer Website",
-    link: "/case-studies/vanguard",
+    title: "Hivestaff V2",
+    description: "Redesigning mobile operations for business management — scannable cards, one-tap lead actions, and modular workflows.",
+    tags: ["Mobile App", "Enterprise UX", "Operations"],
+    image: "/hivestaff_redesign_v2.png",
+    alt: "Hivestaff V2: Redesigning Mobile Operations for Business Management",
+    link: "/case-studies/hivestaff-v2",
   },
 ];
 
@@ -194,7 +185,7 @@ export default function PortfolioSection({ cards = DEFAULT_PORTFOLIO_ITEMS }: Po
           </motion.div>
 
           {/* Bottom CTA Button: "View More Work" */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
@@ -208,7 +199,7 @@ export default function PortfolioSection({ cards = DEFAULT_PORTFOLIO_ITEMS }: Po
               <span>View More Work</span>
               <ArrowUpRightSvg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
