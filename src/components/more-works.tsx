@@ -45,15 +45,15 @@ export const ALL_PROJECTS: (PortfolioCardProps & { slug: string })[] = [
     link: "/case-studies/hivestaff-v2",
   },
   {
-    slug: "vanguard",
+    slug: "hivemeet",
     id: 4,
-    title: "Vanguard",
+    title: "HiveMeet",
     description:
-      "Interactive editorial platform with bespoke micro-interactions.",
-    tags: ["Framer Website", "Product Design"],
-    image: "/demo-4.webp",
-    alt: "Vanguard Framer Website",
-    link: "/case-studies/vanguard",
+      "Designing a connected meeting & collaboration workspace — unifying scheduling, contextual in-meeting controls, and AI-powered productivity tools.",
+    tags: ["Web App", "Collaboration", "Product Design"],
+    image: "/HiveMeet.png",
+    alt: "HiveMeet: Designing a Connected Meeting & Collaboration Workspace",
+    link: "/case-studies/hivemeet",
   },
 ];
 

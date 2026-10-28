@@ -39,6 +39,15 @@ const DEFAULT_PORTFOLIO_ITEMS: PortfolioCardProps[] = [
     alt: "Hivestaff V2: Redesigning Mobile Operations for Business Management",
     link: "/case-studies/hivestaff-v2",
   },
+  {
+    id: 4,
+    title: "HiveMeet",
+    description: "Designing a connected meeting & collaboration workspace — unified scheduling, contextual in-meeting controls, and AI-powered productivity tools.",
+    tags: ["Web App", "Collaboration", "Product Design"],
+    image: "/HiveMeet.png",
+    alt: "HiveMeet: Designing a Connected Meeting & Collaboration Workspace",
+    link: "/case-studies/hivemeet",
+  },
 ];
 
 export default function PortfolioSection({ cards = DEFAULT_PORTFOLIO_ITEMS }: PortfolioSectionProps) {

@@ -4,6 +4,7 @@ import Image from "next/image";
 import OGcollegeCaseStudy from "@/views/case-study/ogcollege-case-study";
 import HivePropertyCaseStudy from "@/views/case-study/hiveproperty-case-study";
 import HivestaffCaseStudy from "@/views/case-study/hivestaff-case-study";
+import HiveMeetCaseStudy from "@/views/case-study/hivemeet-case-study";
 import MoreWorks from "@/components/more-works";
 
 interface CaseStudySlugProps {
@@ -83,6 +84,26 @@ const PROJECTS_DATA: Record<string, ProjectDetail> = {
       "Redesigning mobile operations for business management — high-density scannable cards, one-tap lead actions, and modular workflows.",
     image: "/hivestaff_redesign_v2.png",
   },
+  hivemeet: {
+    title: "HiveMeet",
+    category: "Web Application • Collaboration & Productivity • AI Workspace",
+    role: "UI/UX Designer (End-to-End Product Design)",
+    timeline: "4 Weeks",
+    client: "HiveMeet",
+    description:
+      "Designing a connected meeting & collaboration workspace — unifying scheduling, contextual in-meeting controls, and AI-powered productivity tools.",
+    image: "/HiveMeet.png",
+  },
+  "hive-meet": {
+    title: "HiveMeet",
+    category: "Web Application • Collaboration & Productivity • AI Workspace",
+    role: "UI/UX Designer (End-to-End Product Design)",
+    timeline: "4 Weeks",
+    client: "HiveMeet",
+    description:
+      "Designing a connected meeting & collaboration workspace — unifying scheduling, contextual in-meeting controls, and AI-powered productivity tools.",
+    image: "/HiveMeet.png",
+  },
 };
 
 export async function generateStaticParams() {
@@ -132,6 +153,11 @@ export default async function CaseStudyDetailPage({
   // If slug is hivestaff-v2, hivestaff, or luminary, render Hivestaff V2 case study
   if (slug === "hivestaff-v2" || slug === "hivestaff" || slug === "luminary") {
     return <HivestaffCaseStudy />;
+  }
+
+  // If slug is hivemeet or hive-meet, render HiveMeet case study
+  if (slug === "hivemeet" || slug === "hive-meet") {
+    return <HiveMeetCaseStudy />;
   }
 
   const project = (slug && PROJECTS_DATA[slug]) || {

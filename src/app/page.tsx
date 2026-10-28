@@ -5,6 +5,7 @@ import HireMeSection from "@/views/home/hire-me";
 import TestimonialsSection from "@/views/home/testimonials";
 import ProjectDiscussionSection from "@/views/home/discuss";
 import BlogSection from "@/views/home/blog-section";
+import ToolsSection from "@/views/home/tools-section";
 
 export default function Home() {
   return (
@@ -42,6 +43,11 @@ export default function Home() {
       {/* Seventh Section: Project Discussion / CTA */}
       <div className="relative z-10 w-full bg-white">
         <ProjectDiscussionSection />
+      </div>
+
+      {/* Eighth Section: Creative Tools & Stack */}
+      <div className="relative z-10 w-full bg-white">
+        <ToolsSection />
       </div>
     </main>
   );
